@@ -48,6 +48,18 @@
     cursor: pointer;
 }
 
+.options.selected {
+    color: #ff4b4b;
+}
+
+.options.selected figure:not(.selected) {
+    opacity: 30%;
+}
+
+.options.selected .correct {
+    color: #009c22;
+}
+
 .options figure img {
     width: 100%;
     height: calc(6vw + 90px);
