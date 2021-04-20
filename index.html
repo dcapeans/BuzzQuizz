@@ -26,18 +26,18 @@
         <p>BuzzQuizz</p>
     </header>
 
-    <section class="my-quizzes hidden">
+    <section class="my-quizzes">
         <div class="my-quizzes-head">
             <span>Seus Quizzes</span>
-            <ion-icon name="add-circle"></ion-icon>
+            <ion-icon name="add-circle" onclick="createQuizz()"></ion-icon>
         </div>
         <div class="create-quizz">
             <p>Você não criou nenhum quizz ainda :(</p>
-            <button>Criar Quizz</button>
+            <button onclick="createQuizz()">Criar Quizz</button>
         </div>
     </section>
 
-    <section class="all-quizzes hidden">
+    <section class="all-quizzes">
         <p>Todos os Quizzes</p>
         <ul class="quizz-list">
             <li>
@@ -208,7 +208,7 @@
         <button class="creation-button">Finalizar Quizz</button>
     </section>
 
-    <section class="creation-quizz">
+    <section class="creation-quizz hidden">
         <p class="creation-page-title">Seu quizz está pronto!</p>
         <img src="/assets/img/hogwarts.png" alt="">
         <button class="creation-button">Acessar Quizz</button>
@@ -220,6 +220,7 @@
     <script src="assets/js/getOneQuiz.js"></script>
     <script src="assets/js/renderOneQuiz.js"></script>
     <script src="assets/js/showOrHide.js"></script>
+    <script src="assets/js/createQuizz.js"></script>
 </body>
 
 </html>

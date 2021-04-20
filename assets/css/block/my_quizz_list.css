@@ -21,6 +21,7 @@
     color: #ec362d;
     font-size: 35px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .create-quizz {
