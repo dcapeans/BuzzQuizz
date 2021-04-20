@@ -6,7 +6,9 @@ header {
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 77px;
+    position: fixed;
+    top: 0;
+    z-index: 20;
 }
 
 header p {

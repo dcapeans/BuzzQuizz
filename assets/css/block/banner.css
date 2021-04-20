@@ -1,0 +1,14 @@
+.quizz-banner {
+    width: 100%;
+    height: calc(8vw + 112px);
+    max-height: 227px;
+    background-image: url("../../img/banner.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizz-banner p {
+    color: white;
+    font-size: calc(1.8vw + 12px);
+}

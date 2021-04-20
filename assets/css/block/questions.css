@@ -1,0 +1,60 @@
+.questions {
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+}
+
+.quizz-question {
+    width: 100%;
+    max-width: 750px;
+    padding: 18px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.quizz-question .title {
+    font-size: calc(0.3vw + 18px);
+    width: 100%;
+    height: calc(4.6vw + 72px);
+    background: #464CA0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.title p {
+    margin: 0 10%;
+}
+
+.quizz-question .options {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.options figure {
+    width: 48%;
+    margin-top: 12px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.options figure img {
+    width: 100%;
+    height: calc(6vw + 90px);
+    object-fit: cover;
+    object-position: center;
+}
+
+.options figure figcaption {
+    padding-top: 10px;
+}

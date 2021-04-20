@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/block/header.css">
     <link rel="stylesheet" href="/assets/css/block/my_quizz_list.css">
     <link rel="stylesheet" href="/assets/css/block/all_quizz_list.css">
+    <link rel="stylesheet" href="/assets/css/block/banner.css">
+    <link rel="stylesheet" href="/assets/css/block/questions.css">
+    <link rel="stylesheet" href="/assets/css/block/result.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
 
     <title>BuzzQuizz</title>
 </head>
@@ -19,7 +23,7 @@
         <p>BuzzQuizz</p>
     </header>
 
-    <section class="my_quizzes">
+    <section class="my_quizzes hidden">
         <div class="my_quizzes_head">
             <span>Seus Quizzes</span>
             <ion-icon name="add-circle"></ion-icon>
@@ -30,7 +34,7 @@
         </div>
     </section>
 
-    <section class="all_quizzes">
+    <section class="all_quizzes hidden">
         <p>Todos os Quizzes</p>
         <ul class="quizz_list">
             <li>
@@ -66,6 +70,81 @@
             
         </ul>
     </section>
+
+    <div class="quizz-banner">
+        <p>O quão Potterhead é você?</p>
+    </div>
+
+    <ul class="questions">
+        <li class="quizz-question">
+            <div class="title">
+                <p>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</p>
+            </div>
+            <div class="options">
+                <figure>
+                    <img src="assets/img/gato.png" />
+                    <figcaption>Gatíneo</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/rato.png" />
+                    <figcaption>Ratata</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/sapo.png" />
+                    <figcaption>Sapo gordo</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/furao.png" />
+                    <figcaption>Mustela putorius (o Furão)</figcaption>
+                </figure>
+            </div>
+        </li>
+
+        <li class="quizz-question">
+            <div class="title">
+                <p>Qual dos objetos abaixo NÃO é uma horcrux?</p>
+            </div>
+            <div class="options">
+                <figure>
+                    <img src="assets/img/harry.png" />
+                    <figcaption>The boy who lived</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/livro.png" />
+                    <figcaption>O livro monstruoso dos monstros</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/anel.png" />
+                    <figcaption>Anel velho</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/diadema.png" />
+                    <figcaption>Diadema da Ravenclaw</figcaption>
+                </figure>
+            </div>
+        </li>
+    </ul>
+
+    <div class="result">
+        <div class="quizz-result">
+            <div class="title">
+                <p>88% de acerto: Você é praticamente um aluno de Hogwarts!</p>
+            </div>
+            <figure>
+                <img src="assets/img/result.png" />
+                <figcaption>
+                    Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop
+                    infinito de comida e clique no botão abaixo para usar o
+                    vira-tempo e reiniciar este teste.
+                </figcaption>
+            </figure>
+        </div>
+        <button>Reiniciar Quizz</button>
+        <button>Voltar pra home</button>
+    </div>
+    
+
+
 </body>
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
