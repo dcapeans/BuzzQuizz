@@ -1,12 +1,12 @@
 function renderQuizzes(data) {
-    const quizList = document.querySelector('.quizz_list');
-    quizList.innerHTML = '';
-    data.forEach(quiz => {
-        quizList.innerHTML += `
+	const quizList = document.querySelector('.quizz_list');
+	quizList.innerHTML = '';
+	data.forEach((quiz) => {
+		quizList.innerHTML += `
             <li>
-                <article class="quizz_card" data-id="${quiz.id}" style="background-image: url('${quiz.image}');">
+                <article class="quizz_card" data-id="${quiz.id}" style="background-image: url('${quiz.image}');" onclick="getOneQuiz(this)">
                     <a href="#" class="quizz_title">${quiz.title}</a>
                 </article>
             </li>`;
-    });
+	});
 }
