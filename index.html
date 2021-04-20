@@ -38,11 +38,11 @@
 		<section class="my-quizzes">
 			<div class="my-quizzes-head">
 				<span>Seus Quizzes</span>
-				<ion-icon name="add-circle" onclick="createQuizz()"></ion-icon>
+				<ion-icon name="add-circle" onclick="ShowCreateQuizz()"></ion-icon>
 			</div>
 			<div class="create-quizz">
 				<p>Você não criou nenhum quizz ainda :(</p>
-				<button onclick="createQuizz()">Criar Quizz</button>
+				<button onclick="ShowCreateQuizz()">Criar Quizz</button>
 			</div>
 		</section>
 
@@ -152,8 +152,10 @@
 					</figcaption>
 				</figure>
 			</div>
-			<button onclick="getOneQuiz(this, false, 1)">Reiniciar Quizz</button>
-			<button>Voltar pra home</button>
+			<button onclick="getOneQuiz(this, false, 1)">
+				Reiniciar Quizz
+			</button>
+			<button onclick="showHomepage()">Voltar pra home</button>
 		</div>
 
 		<section class="creation-quizz hidden">
@@ -237,14 +239,16 @@
 			<button class="creation-button">Acessar Quizz</button>
 			<button class="back-home-button">Voltar para home</button>
 		</section>
+
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="assets/js/requests/getQuizzes.js"></script>
 		<script src="assets/js/requests/getOneQuiz.js"></script>
 		<script src="assets/js/renders/renderQuizzes.js"></script>
 		<script src="assets/js/renders/renderOneQuiz.js"></script>
-		<script src="assets/js/create-quiz/createQuizz.js"></script>
+		<script src="assets/js/create-quiz/ShowCreateQuizz.js"></script>
 		<script src="assets/js/solve-quiz/selectAnswer.js"></script>
 		<script src="assets/js/utils/showOrHide.js"></script>
 		<script src="assets/js/utils/shuffleArray.js"></script>
+		<script src="assets/js/utils/showHomepage.js"></script>
 	</body>
 </html>
