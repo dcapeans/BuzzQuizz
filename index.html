@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.png">
@@ -23,7 +25,7 @@
         <p>BuzzQuizz</p>
     </header>
 
-    <section class="my_quizzes hidden">
+    <section class="my_quizzes">
         <div class="my_quizzes_head">
             <span>Seus Quizzes</span>
             <ion-icon name="add-circle"></ion-icon>
@@ -34,7 +36,7 @@
         </div>
     </section>
 
-    <section class="all_quizzes hidden">
+    <section class="all_quizzes">
         <p>Todos os Quizzes</p>
         <ul class="quizz_list">
             <li>
@@ -71,11 +73,11 @@
         </ul>
     </section>
 
-    <div class="quizz-banner">
+    <div class="quizz-banner hidden">
         <p>O quão Potterhead é você?</p>
     </div>
 
-    <ul class="questions">
+    <ul class="questions hidden">
         <li class="quizz-question">
             <div class="title">
                 <p>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</p>
@@ -125,7 +127,7 @@
         </li>
     </ul>
 
-    <div class="result">
+    <div class="result hidden">
         <div class="quizz-result">
             <div class="title">
                 <p>88% de acerto: Você é praticamente um aluno de Hogwarts!</p>
@@ -144,8 +146,9 @@
     </div>
     
 
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="assets/js/getQuizzes.js"></script>
+    <script src="assets/js/renderQuizzes.js"></script>
 </body>
-<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
 </html>
