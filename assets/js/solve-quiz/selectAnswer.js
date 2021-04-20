@@ -1,11 +1,10 @@
 function selectAnswer(element) {
     const parent = element.parentElement;
+    const children = [...parent.children];
     parent.classList.add('selected');
     element.classList.add('selected');
 
-    parent.childNodes.forEach(child => {
-        if(`${child.__proto__}` === "[object HTMLElement]") {
-            child.removeAttribute('onclick');
-        }
+    children.forEach(child => {
+        child.removeAttribute('onclick');
     });
 }
