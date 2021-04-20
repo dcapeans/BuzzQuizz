@@ -1,4 +1,4 @@
-function renderOneQuiz(quiz) {
+function renderOneQuiz(quiz, fromHome) {
     const banner = document.querySelector('.quizz-banner');
     const questions = document.querySelector('.questions');
     const myQuizzes = document.querySelector('.my-quizzes');
@@ -33,5 +33,5 @@ function renderOneQuiz(quiz) {
             </li>`;
     });
 
-    showOrHide(banner, questions, myQuizzes, allQuizzes);
+    if(fromHome) showOrHide(banner, questions, myQuizzes, allQuizzes);
 }
