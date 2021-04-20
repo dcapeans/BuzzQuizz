@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/assets/css/block/banner.css">
     <link rel="stylesheet" href="/assets/css/block/questions.css">
     <link rel="stylesheet" href="/assets/css/block/result.css">
+    <link rel="stylesheet" href="/assets/css/block/creation.css">
     <link rel="stylesheet" href="/assets/css/global.css">
 
     <title>BuzzQuizz</title>
@@ -25,48 +26,48 @@
         <p>BuzzQuizz</p>
     </header>
 
-    <section class="my_quizzes">
-        <div class="my_quizzes_head">
+    <section class="my-quizzes hidden">
+        <div class="my-quizzes-head">
             <span>Seus Quizzes</span>
             <ion-icon name="add-circle"></ion-icon>
         </div>
-        <div class="create_quizz">
+        <div class="create-quizz">
             <p>Você não criou nenhum quizz ainda :(</p>
             <button>Criar Quizz</button>
         </div>
     </section>
 
-    <section class="all_quizzes">
+    <section class="all-quizzes hidden">
         <p>Todos os Quizzes</p>
-        <ul class="quizz_list">
+        <ul class="quizz-list">
             <li>
-                <article class="quizz_card">
-                    <a href="#" class="quizz_title">titulo do quizz aqui</a>
+                <article class="quizz-card">
+                    <a href="#" class="quizz-title">titulo do quizz aqui</a>
+                </article>
+            </li>
+            <li>
+                <article class="quizz-card">
+                    <a href="#" class="quizz-title">titulo do quizz aqui</a>
                 </article>
             </li>
             <li>
                 <article class="quizz_card">
-                    <a href="#" class="quizz_title">titulo do quizz aqui</a>
+                    <a href="#" class="quizz-title">titulo do quizz aqui</a>
                 </article>
             </li>
             <li>
-                <article class="quizz_card">
-                    <a href="#" class="quizz_title">titulo do quizz aqui</a>
+                <article class="quizz-card">
+                    <a href="#" class="quizz-title">titulo do quizz aqui</a>
                 </article>
             </li>
             <li>
-                <article class="quizz_card">
-                    <a href="#" class="quizz_title">titulo do quizz aqui</a>
+                <article class="quizz-card">
+                    <a href="#" class="quizz-title">titulo do quizz aqui</a>
                 </article>
             </li>
             <li>
-                <article class="quizz_card">
-                    <a href="#" class="quizz_title">titulo do quizz aqui</a>
-                </article>
-            </li>
-            <li>
-                <article class="quizz_card">
-                    <a href="#" class="quizz_title">titulo do quizz aqui</a>
+                <article class="quizz-card">
+                    <a href="#" class="quizz-title">titulo do quizz aqui</a>
                 </article>
             </li>
             
@@ -145,7 +146,74 @@
         <button>Voltar pra home</button>
     </div>
     
+    <section class="creation-quizz hidden">
+        <p class="creation-page-title">Comece pelo começo</p>
+        <div class="input-list">
+            <input type="text" placeholder="Título do seu quizz">
+            <input type="text" placeholder="URL da imagem do seu quizz">
+            <input type="text" placeholder="Quantidade de perguntas do quizz">
+            <input type="text" placeholder="Quantidade de níveis do quizz">
+        </div>
+        <button class="creation-button">Prosseguir pra criar perguntas</button>
+    </section>
 
+    <section class="creation-quizz hidden">
+        <p class="creation-page-title">Crie suas perguntas</p>
+            <div class="input-list">
+                <span class="option-title">Pergunta 1</span>
+                <input type="text" placeholder="Texto da pergunta">
+                <input type="text" placeholder="Cor de fundo da pergunta (em hexadecimal)">
+                <span class="option-title">Resposta correta</span>
+                <input type="text" placeholder="Resposta correta">
+                <input type="text" placeholder="URL da imagem">
+                <span class="option-title">Resposta incorreta</span>
+                <input type="text" placeholder="Resposta incorreta 1">
+                <input type="text" placeholder="URL da imagem 1">
+                <div class="spacer"></div>
+                <input type="text" placeholder="Resposta incorreta 2">
+                <input type="text" placeholder="URL da imagem 2">
+                <div class="spacer"></div>
+                <input type="text" placeholder="Resposta incorreta 3">
+                <input type="text" placeholder="URL da imagem 3">
+            </div>
+            
+            <div class="input-list collapsed">
+                <span class="option-title">Pergunta 2</span>
+                <ion-icon name="create-outline"></ion-icon>
+            </div>
+            <div class="input-list collapsed">
+                <span class="option-title">Pergunta 3</span>
+                <ion-icon name="create-outline"></ion-icon>
+            </div>
+        <button class="creation-button">Prosseguir para criar níveis</button>
+    </section>
+
+    <section class="creation-quizz hidden">
+        <p class="creation-page-title">Agora, decida os níveis</p>
+        <div class="input-list">
+            <span class="option-title">Nível 1</span>
+            <input type="text" placeholder="Título do nível">
+            <input type="text" placeholder="% de acerto mínima">
+            <input type="text" placeholder="URL da imagem do nível">
+            <input type="text" placeholder="Descrição do nível">
+        </div>
+        <div class="input-list collapsed">
+            <span class="option-title">Nível 2</span>
+            <ion-icon name="create-outline"></ion-icon>
+        </div>
+        <div class="input-list collapsed">
+            <span class="option-title">Nível 2</span>
+            <ion-icon name="create-outline"></ion-icon>
+        </div>
+        <button class="creation-button">Finalizar Quizz</button>
+    </section>
+
+    <section class="creation-quizz">
+        <p class="creation-page-title">Seu quizz está pronto!</p>
+        <img src="/assets/img/hogwarts.png" alt="">
+        <button class="creation-button">Acessar Quizz</button>
+        <button class="back-home-button">Voltar para home</button>
+    </section>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="assets/js/getQuizzes.js"></script>
     <script src="assets/js/renderQuizzes.js"></script>
