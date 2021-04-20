@@ -33,5 +33,5 @@ function renderOneQuiz(quiz, fromHome) {
             </li>`;
     });
 
-    if(fromHome) showOrHide(banner, questions, myQuizzes, allQuizzes);
+    if(fromHome) showOrHide([banner, questions], [myQuizzes, allQuizzes]);
 }

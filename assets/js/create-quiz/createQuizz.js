@@ -3,5 +3,5 @@ function createQuizz() {
     const allQuizzes = document.querySelector('.all-quizzes');
     const creation = document.querySelector('.creation-quizz');
 
-    showOrHide(myQuizzes, allQuizzes, creation);
+    showOrHide([creation], [myQuizzes, allQuizzes]);
 }
