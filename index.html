@@ -156,25 +156,25 @@
         <form name="basic-info">
             <div class="input-list">
                 <input type="text" placeholder="Título do seu quizz" minlength="20" maxlength="65" required />
-                <input type="url" placeholder="URL da imagem do seu quizz"
-                    pattern="http(s?)(:\/\/)((www.)?)([a-zA-z0-9\-_]+)(.com)" size="30" required />
+                <input type="url" placeholder="URL da imagem do seu quizz" size="50" required />
                 <input type="number" placeholder="Quantidade de perguntas do quizz" min="3" required />
                 <input type="number" placeholder="Quantidade de níveis do quizz" min="2" required />
             </div>
-            <button class="creation-button" name="basic-info-button" onclick="ShowCreateQuestion()">
+            <button class="creation-button" name="basic-info-button">
                 Prosseguir pra criar perguntas
             </button>
         </form>
-        
+
     </section>
 
     <section class="creation-quizz hidden" name="questions">
         <p class="creation-page-title">Crie suas perguntas</p>
-        <div class="input-list collapsed hidden">
-            <span class="option-title">Pergunta 1</span>
-            <ion-icon name="create-outline"></ion-icon>
-        </div>
-        <form name="question-1">
+        <form name="questions-info">
+            <div class="input-list collapsed hidden">
+                <span class="option-title">Pergunta 1</span>
+                <ion-icon name="create-outline"></ion-icon>
+            </div>
+
             <div class="input-list">
                 <span class="option-title">Pergunta 1</span>
                 <input type="text" placeholder="Texto da pergunta" minlength="20" required />
@@ -197,19 +197,18 @@
                 <input type="url" placeholder="URL da imagem 3"
                     pattern="http(s?)(:\/\/)((www.)?)([a-zA-z0-9\-_]+)(.com)" size="30" />
             </div>
+            <div class="input-list collapsed">
+                <span class="option-title">Pergunta 2</span>
+                <ion-icon name="create-outline"></ion-icon>
+            </div>
+            <div class="input-list collapsed">
+                <span class="option-title">Pergunta 3</span>
+                <ion-icon name="create-outline"></ion-icon>
+            </div>
+            <button class="creation-button" name="question-section-button">
+                Prosseguir para criar níveis
+            </button>
         </form>
-
-        <div class="input-list collapsed">
-            <span class="option-title">Pergunta 2</span>
-            <ion-icon name="create-outline"></ion-icon>
-        </div>
-        <div class="input-list collapsed">
-            <span class="option-title">Pergunta 3</span>
-            <ion-icon name="create-outline"></ion-icon>
-        </div>
-        <button class="creation-button" onclick="ShowCreateLevels()">
-            Prosseguir para criar níveis
-        </button>
     </section>
 
     <section class="creation-quizz hidden" name="levels">
@@ -230,7 +229,7 @@
             <span class="option-title">Nível 2</span>
             <ion-icon name="create-outline"></ion-icon>
         </div>
-        <button class="creation-button" onclick="ShowCreateDone()">Finalizar Quizz</button>
+        <button class="creation-button" name="level-section-button" onclick="ShowCreateDone()">Finalizar Quizz</button>
     </section>
 
     <section class="creation-quizz hidden" name="quizz-done">
@@ -247,6 +246,7 @@
     <script src="assets/js/renders/renderOneQuiz.js"></script>
     <script src="assets/js/create-quiz/ShowCreateQuizz.js"></script>
     <script src="assets/js/create-quiz/validateBasicInfo.js"></script>
+    <script src="assets/js/create-quiz/validateQuestionInfo.js"></script>
     <script src="assets/js/solve-quiz/selectAnswer.js"></script>
     <script src="assets/js/utils/showOrHide.js"></script>
     <script src="assets/js/utils/shuffleArray.js"></script>

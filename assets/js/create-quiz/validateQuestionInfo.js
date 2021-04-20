@@ -1,27 +1,15 @@
-const quizzObject = {
-    title: "",
-    image: "",
-    questions: [],
-    levels: []
-}
-
-let numberQuestions;
-let numberLevels;
-
-InitBasicButtonListener()
-
-function InitBasicButtonListener(){
-    const form = document.querySelector("[name=basic-info]")
+function InitQuestionButtonListener(){
+    const form = document.querySelector("[name=questions-info]")
 
     form.addEventListener("submit", function(event){
         event.preventDefault()
-        submitBasicInfo()
-        ShowCreateQuestion()
+        submitQuestionInfo()
+        ShowCreateLevels()
         return false
     })
 }
 
-function submitBasicInfo() {
+function submitQuestionInfo() {
     const form = document.querySelector("[name=basic-info]")
     const valuesArr = form.querySelectorAll("input")
     
