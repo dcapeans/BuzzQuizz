@@ -1,254 +1,256 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script
-			type="module"
-			src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
-		></script>
-		<script
-			nomodule=""
-			src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
-		></script>
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="icon" href="assets/img/favicon.png" />
-		<link rel="stylesheet" href="/assets/css/reset.css" />
-		<link rel="stylesheet" href="/assets/css/block/header.css" />
-		<link rel="stylesheet" href="/assets/css/block/my_quizz_list.css" />
-		<link rel="stylesheet" href="/assets/css/block/all_quizz_list.css" />
-		<link rel="stylesheet" href="/assets/css/block/banner.css" />
-		<link rel="stylesheet" href="/assets/css/block/questions.css" />
-		<link rel="stylesheet" href="/assets/css/block/result.css" />
-		<link rel="stylesheet" href="/assets/css/block/creation.css" />
-		<link rel="stylesheet" href="/assets/css/global.css" />
 
-		<title>BuzzQuizz</title>
-	</head>
-	<body>
-		<header>
-			<p>BuzzQuizz</p>
-		</header>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="assets/img/favicon.png" />
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/block/header.css" />
+    <link rel="stylesheet" href="/assets/css/block/my_quizz_list.css" />
+    <link rel="stylesheet" href="/assets/css/block/all_quizz_list.css" />
+    <link rel="stylesheet" href="/assets/css/block/banner.css" />
+    <link rel="stylesheet" href="/assets/css/block/questions.css" />
+    <link rel="stylesheet" href="/assets/css/block/result.css" />
+    <link rel="stylesheet" href="/assets/css/block/creation.css" />
+    <link rel="stylesheet" href="/assets/css/global.css" />
 
-		<section class="my-quizzes">
-			<div class="my-quizzes-head">
-				<span>Seus Quizzes</span>
-				<ion-icon name="add-circle" onclick="ShowCreateQuizz()"></ion-icon>
-			</div>
-			<div class="create-quizz">
-				<p>Você não criou nenhum quizz ainda :(</p>
-				<button onclick="ShowCreateQuizz()">Criar Quizz</button>
-			</div>
-		</section>
+    <title>BuzzQuizz</title>
+</head>
 
-		<section class="all-quizzes">
-			<p>Todos os Quizzes</p>
-			<ul class="quizz-list">
-				<li>
-					<article class="quizz-card">
-						<a href="#" class="quizz-title">titulo do quizz aqui</a>
-					</article>
-				</li>
-				<li>
-					<article class="quizz-card">
-						<a href="#" class="quizz-title">titulo do quizz aqui</a>
-					</article>
-				</li>
-				<li>
-					<article class="quizz_card">
-						<a href="#" class="quizz-title">titulo do quizz aqui</a>
-					</article>
-				</li>
-				<li>
-					<article class="quizz-card">
-						<a href="#" class="quizz-title">titulo do quizz aqui</a>
-					</article>
-				</li>
-				<li>
-					<article class="quizz-card">
-						<a href="#" class="quizz-title">titulo do quizz aqui</a>
-					</article>
-				</li>
-				<li>
-					<article class="quizz-card">
-						<a href="#" class="quizz-title">titulo do quizz aqui</a>
-					</article>
-				</li>
-			</ul>
-		</section>
+<body>
+    <header>
+        <p>BuzzQuizz</p>
+    </header>
 
-		<div class="quizz-banner hidden">
-			<p>O quão Potterhead é você?</p>
-		</div>
+    <section class="my-quizzes hidden">
+        <div class="my-quizzes-head">
+            <span>Seus Quizzes</span>
+            <ion-icon name="add-circle" onclick="ShowCreateQuizz()"></ion-icon>
+        </div>
+        <div class="create-quizz">
+            <p>Você não criou nenhum quizz ainda :(</p>
+            <button onclick="ShowCreateQuizz()">Criar Quizz</button>
+        </div>
+    </section>
 
-		<ul class="questions hidden">
-			<li class="quizz-question">
-				<div class="title">
-					<p>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</p>
-				</div>
-				<div class="options">
-					<figure>
-						<img src="assets/img/gato.png" />
-						<figcaption>Gatíneo</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/img/rato.png" />
-						<figcaption>Ratata</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/img/sapo.png" />
-						<figcaption>Sapo gordo</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/img/furao.png" />
-						<figcaption>Mustela putorius (o Furão)</figcaption>
-					</figure>
-				</div>
-			</li>
+    <section class="all-quizzes hidden">
+        <p>Todos os Quizzes</p>
+        <ul class="quizz-list">
+            <li>
+                <article class="quizz-card">
+                    <a href="#" class="quizz-title">titulo do quizz aqui</a>
+                </article>
+            </li>
+            <li>
+                <article class="quizz-card">
+                    <a href="#" class="quizz-title">titulo do quizz aqui</a>
+                </article>
+            </li>
+            <li>
+                <article class="quizz_card">
+                    <a href="#" class="quizz-title">titulo do quizz aqui</a>
+                </article>
+            </li>
+            <li>
+                <article class="quizz-card">
+                    <a href="#" class="quizz-title">titulo do quizz aqui</a>
+                </article>
+            </li>
+            <li>
+                <article class="quizz-card">
+                    <a href="#" class="quizz-title">titulo do quizz aqui</a>
+                </article>
+            </li>
+            <li>
+                <article class="quizz-card">
+                    <a href="#" class="quizz-title">titulo do quizz aqui</a>
+                </article>
+            </li>
+        </ul>
+    </section>
 
-			<li class="quizz-question">
-				<div class="title">
-					<p>Qual dos objetos abaixo NÃO é uma horcrux?</p>
-				</div>
-				<div class="options selected">
-					<figure class="selected">
-						<img src="assets/img/harry.png" />
-						<figcaption>The boy who lived</figcaption>
-					</figure>
-					<figure class="correct">
-						<img src="assets/img/livro.png" />
-						<figcaption>O livro monstruoso dos monstros</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/img/anel.png" />
-						<figcaption>Anel velho</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/img/diadema.png" />
-						<figcaption>Diadema da Ravenclaw</figcaption>
-					</figure>
-				</div>
-			</li>
-		</ul>
+    <div class="quizz-banner hidden">
+        <p>O quão Potterhead é você?</p>
+    </div>
 
-		<div class="result">
-			<div class="quizz-result">
-				<div class="title">
-					<p>
-						88% de acerto: Você é praticamente um aluno de Hogwarts!
-					</p>
-				</div>
-				<figure>
-					<img src="assets/img/result.png" />
-					<figcaption>
-						Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o
-						loop infinito de comida e clique no botão abaixo para
-						usar o vira-tempo e reiniciar este teste.
-					</figcaption>
-				</figure>
-			</div>
-			<button onclick="getOneQuiz(this, false, 1)">
-				Reiniciar Quizz
-			</button>
-			<button onclick="showHomepage()">Voltar pra home</button>
-		</div>
+    <ul class="questions hidden">
+        <li class="quizz-question">
+            <div class="title">
+                <p>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</p>
+            </div>
+            <div class="options">
+                <figure>
+                    <img src="assets/img/gato.png" />
+                    <figcaption>Gatíneo</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/rato.png" />
+                    <figcaption>Ratata</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/sapo.png" />
+                    <figcaption>Sapo gordo</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/furao.png" />
+                    <figcaption>Mustela putorius (o Furão)</figcaption>
+                </figure>
+            </div>
+        </li>
 
-		<section class="creation-quizz hidden">
-			<p class="creation-page-title">Comece pelo começo</p>
-			<div class="input-list">
-				<input type="text" placeholder="Título do seu quizz" />
-				<input type="text" placeholder="URL da imagem do seu quizz" />
-				<input
-					type="text"
-					placeholder="Quantidade de perguntas do quizz"
-				/>
-				<input
-					type="text"
-					placeholder="Quantidade de níveis do quizz"
-				/>
-			</div>
-			<button class="creation-button">
-				Prosseguir pra criar perguntas
-			</button>
-		</section>
+        <li class="quizz-question">
+            <div class="title">
+                <p>Qual dos objetos abaixo NÃO é uma horcrux?</p>
+            </div>
+            <div class="options selected">
+                <figure class="selected">
+                    <img src="assets/img/harry.png" />
+                    <figcaption>The boy who lived</figcaption>
+                </figure>
+                <figure class="correct">
+                    <img src="assets/img/livro.png" />
+                    <figcaption>O livro monstruoso dos monstros</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/anel.png" />
+                    <figcaption>Anel velho</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/diadema.png" />
+                    <figcaption>Diadema da Ravenclaw</figcaption>
+                </figure>
+            </div>
+        </li>
+    </ul>
 
-		<section class="creation-quizz hidden">
-			<p class="creation-page-title">Crie suas perguntas</p>
-			<div class="input-list">
-				<span class="option-title">Pergunta 1</span>
-				<input type="text" placeholder="Texto da pergunta" />
-				<input
-					type="text"
-					placeholder="Cor de fundo da pergunta (em hexadecimal)"
-				/>
-				<span class="option-title">Resposta correta</span>
-				<input type="text" placeholder="Resposta correta" />
-				<input type="text" placeholder="URL da imagem" />
-				<span class="option-title">Resposta incorreta</span>
-				<input type="text" placeholder="Resposta incorreta 1" />
-				<input type="text" placeholder="URL da imagem 1" />
-				<div class="spacer"></div>
-				<input type="text" placeholder="Resposta incorreta 2" />
-				<input type="text" placeholder="URL da imagem 2" />
-				<div class="spacer"></div>
-				<input type="text" placeholder="Resposta incorreta 3" />
-				<input type="text" placeholder="URL da imagem 3" />
-			</div>
+    <div class="result hidden">
+        <div class="quizz-result">
+            <div class="title">
+                <p>
+                    88% de acerto: Você é praticamente um aluno de Hogwarts!
+                </p>
+            </div>
+            <figure>
+                <img src="assets/img/result.png" />
+                <figcaption>
+                    Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o
+                    loop infinito de comida e clique no botão abaixo para
+                    usar o vira-tempo e reiniciar este teste.
+                </figcaption>
+            </figure>
+        </div>
+        <button onclick="getOneQuiz(this, false, 1)">
+            Reiniciar Quizz
+        </button>
+        <button onclick="showHomepage()">Voltar pra home</button>
+    </div>
 
-			<div class="input-list collapsed">
-				<span class="option-title">Pergunta 2</span>
-				<ion-icon name="create-outline"></ion-icon>
-			</div>
-			<div class="input-list collapsed">
-				<span class="option-title">Pergunta 3</span>
-				<ion-icon name="create-outline"></ion-icon>
-			</div>
-			<button class="creation-button">
-				Prosseguir para criar níveis
-			</button>
-		</section>
+    <section class="creation-quizz" name="basic-info">
+        <p class="creation-page-title">Comece pelo começo</p>
+        <form name="basic-info">
+            <div class="input-list">
+                <input type="text" placeholder="Título do seu quizz" minlength="20" maxlength="65" required />
+                <input type="url" placeholder="URL da imagem do seu quizz"
+                    pattern="http(s?)(:\/\/)((www.)?)([a-zA-z0-9\-_]+)(.com)" size="30" required />
+                <input type="number" placeholder="Quantidade de perguntas do quizz" min="3" required />
+                <input type="number" placeholder="Quantidade de níveis do quizz" min="2" required />
+            </div>
+            <button class="creation-button" name="basic-info-button" onclick="ShowCreateQuestion()">
+                Prosseguir pra criar perguntas
+            </button>
+        </form>
+        
+    </section>
 
-		<section class="creation-quizz hidden">
-			<p class="creation-page-title">Agora, decida os níveis</p>
-			<div class="input-list">
-				<span class="option-title">Nível 1</span>
-				<input type="text" placeholder="Título do nível" />
-				<input type="text" placeholder="% de acerto mínima" />
-				<input type="text" placeholder="URL da imagem do nível" />
-				<input type="text" placeholder="Descrição do nível" />
-			</div>
-			<div class="input-list collapsed">
-				<span class="option-title">Nível 2</span>
-				<ion-icon name="create-outline"></ion-icon>
-			</div>
-			<div class="input-list collapsed">
-				<span class="option-title">Nível 2</span>
-				<ion-icon name="create-outline"></ion-icon>
-			</div>
-			<button class="creation-button">Finalizar Quizz</button>
-		</section>
+    <section class="creation-quizz hidden" name="questions">
+        <p class="creation-page-title">Crie suas perguntas</p>
+        <div class="input-list collapsed hidden">
+            <span class="option-title">Pergunta 1</span>
+            <ion-icon name="create-outline"></ion-icon>
+        </div>
+        <form name="question-1">
+            <div class="input-list">
+                <span class="option-title">Pergunta 1</span>
+                <input type="text" placeholder="Texto da pergunta" minlength="20" required />
+                <input type="text" placeholder="Cor de fundo da pergunta (em hexadecimal)"
+                    pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" required />
+                <span class="option-title">Resposta correta</span>
+                <input type="text" placeholder="Resposta correta" required />
+                <input type="url" placeholder="URL da imagem" pattern="http(s?)(:\/\/)((www.)?)([a-zA-z0-9\-_]+)(.com)"
+                    size="30" required />
+                <span class="option-title">Resposta incorreta</span>
+                <input type="text" placeholder="Resposta incorreta 1" required />
+                <input type="url" placeholder="URL da imagem 1"
+                    pattern="http(s?)(:\/\/)((www.)?)([a-zA-z0-9\-_]+)(.com)" size="30" required />
+                <div class="spacer"></div>
+                <input type="text" placeholder="Resposta incorreta 2" required />
+                <input type="url" placeholder="URL da imagem 2"
+                    pattern="http(s?)(:\/\/)((www.)?)([a-zA-z0-9\-_]+)(.com)" size="30" />
+                <div class="spacer"></div>
+                <input type="text" placeholder="Resposta incorreta 3" required />
+                <input type="url" placeholder="URL da imagem 3"
+                    pattern="http(s?)(:\/\/)((www.)?)([a-zA-z0-9\-_]+)(.com)" size="30" />
+            </div>
+        </form>
 
-		<section class="creation-quizz hidden">
-			<p class="creation-page-title">Seu quizz está pronto!</p>
-			<img src="/assets/img/hogwarts.png" alt="" />
-			<button class="creation-button">Acessar Quizz</button>
-			<button class="back-home-button">Voltar para home</button>
-		</section>
+        <div class="input-list collapsed">
+            <span class="option-title">Pergunta 2</span>
+            <ion-icon name="create-outline"></ion-icon>
+        </div>
+        <div class="input-list collapsed">
+            <span class="option-title">Pergunta 3</span>
+            <ion-icon name="create-outline"></ion-icon>
+        </div>
+        <button class="creation-button" onclick="ShowCreateLevels()">
+            Prosseguir para criar níveis
+        </button>
+    </section>
 
-		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-		<script src="assets/js/requests/getQuizzes.js"></script>
-		<script src="assets/js/requests/getOneQuiz.js"></script>
-		<script src="assets/js/renders/renderQuizzes.js"></script>
-		<script src="assets/js/renders/renderOneQuiz.js"></script>
-		<script src="assets/js/create-quiz/ShowCreateQuizz.js"></script>
-		<script src="assets/js/solve-quiz/selectAnswer.js"></script>
-		<script src="assets/js/utils/showOrHide.js"></script>
-		<script src="assets/js/utils/shuffleArray.js"></script>
-		<script src="assets/js/utils/showHomepage.js"></script>
-	</body>
+    <section class="creation-quizz hidden" name="levels">
+        <p class="creation-page-title">Agora, decida os níveis</p>
+        <div class="input-list">
+            <span class="option-title">Nível 1</span>
+            <input type="text" placeholder="Título do nível" required />
+            <input type="number" placeholder="% de acerto mínima" min="0" max="100" required />
+            <input type="text" placeholder="URL da imagem do nível"
+                pattern="http(s?)(:\/\/)((www.)?)([a-zA-z0-9\-_]+)(.com)" size="30" required />
+            <input type="text" placeholder="Descrição do nível" minlength="30" />
+        </div>
+        <div class="input-list collapsed">
+            <span class="option-title">Nível 2</span>
+            <ion-icon name="create-outline"></ion-icon>
+        </div>
+        <div class="input-list collapsed">
+            <span class="option-title">Nível 2</span>
+            <ion-icon name="create-outline"></ion-icon>
+        </div>
+        <button class="creation-button" onclick="ShowCreateDone()">Finalizar Quizz</button>
+    </section>
+
+    <section class="creation-quizz hidden" name="quizz-done">
+        <p class="creation-page-title">Seu quizz está pronto!</p>
+        <img src="/assets/img/hogwarts.png" alt="" />
+        <button class="creation-button">Acessar Quizz</button>
+        <button class="back-home-button" onclick="showHomepage()">Voltar para home</button>
+    </section>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="assets/js/requests/getQuizzes.js"></script>
+    <script src="assets/js/requests/getOneQuiz.js"></script>
+    <script src="assets/js/renders/renderQuizzes.js"></script>
+    <script src="assets/js/renders/renderOneQuiz.js"></script>
+    <script src="assets/js/create-quiz/ShowCreateQuizz.js"></script>
+    <script src="assets/js/create-quiz/validateBasicInfo.js"></script>
+    <script src="assets/js/solve-quiz/selectAnswer.js"></script>
+    <script src="assets/js/utils/showOrHide.js"></script>
+    <script src="assets/js/utils/shuffleArray.js"></script>
+    <script src="assets/js/utils/showHomepage.js"></script>
+</body>
+
 </html>

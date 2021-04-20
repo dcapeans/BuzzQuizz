@@ -5,3 +5,24 @@ function ShowCreateQuizz() {
 
     showOrHide([creation], [myQuizzes, allQuizzes]);
 }
+
+function ShowCreateQuestion() {
+    const createQuestion = document.querySelector("[name=questions]")
+    const creation = document.querySelector('.creation-quizz');
+
+    showOrHide([createQuestion], [creation])
+}
+
+function ShowCreateLevels() {
+    const createQuestion = document.querySelector("[name=questions]")
+    const createLevels = document.querySelector("[name=levels]")
+
+    showOrHide([createLevels], [createQuestion])
+}
+
+function ShowCreateDone() {
+    const createLevels = document.querySelector("[name=levels]")
+    const createDone = document.querySelector("[name=quizz-done]")
+
+    showOrHide([createDone], [createLevels])
+}
