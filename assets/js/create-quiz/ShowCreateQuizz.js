@@ -18,8 +18,7 @@ function ShowCreateLevels() {
     const createQuestion = document.querySelector("[name=questions]")
     const createLevels = document.querySelector("[name=levels]")
 
-    renderCreateLevels()
-    showOrHide([createLevels], [createQuestion])
+    validateAll()
 }
 
 function ShowCreateDone() {

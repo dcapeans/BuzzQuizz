@@ -1,8 +1,6 @@
 function renderCreateQuestion() {
     const form = document.querySelector("[name=questions-info]")
-    form.innerHTML = `
-        <p class="creation-page-title">Crie suas perguntas</p>
-    `;
+    form.innerHTML = "";
 
     for (let i = 1; i <= numberQuestions; i++) {
         form.innerHTML += `
@@ -13,43 +11,40 @@ function renderCreateQuestion() {
 
         <div id="question-form-${i}" class="input-list hidden question-form" data-name="question-${i}">
             <span class="option-title">Pergunta ${i}</span>
-            <input
+            <input data-validate="validateText"
                 type="text"
                 placeholder="Texto da pergunta"
                 minlength="20"
-                
             />
-            <input
+            <input data-validate="validateColor"
                 type="text"
                 placeholder="Cor de fundo da pergunta (em hexadecimal)"
-                pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
-                
             />
             <span class="option-title">Resposta correta</span>
-            <input
+            <input data-validate="validateAnswer"
+                data-required="required"
                 type="text"
                 placeholder="Resposta correta"
-                
             />
-            <input type="url" placeholder="URL da imagem" />
+            <input data-validate="validateUrl" data-required="required" type="url" placeholder="URL da imagem" />
             <span class="option-title">Resposta incorreta</span>
-            <input
+            <input data-validate="validateAnswer"
+                data-required="required"
                 type="text"
                 placeholder="Resposta incorreta 1"
-                
             />
-            <input type="url" placeholder="URL da imagem 1"  />
+            <input data-validate="validateUrl" data-required="required" type="url" placeholder="URL da imagem 1"  />
             <div class="spacer"></div>
-            <input type="text" placeholder="Resposta incorreta 2" />
-            <input type="url" placeholder="URL da imagem 2" />
+            <input data-validate="validateAnswer" type="text" placeholder="Resposta incorreta 2" />
+            <input data-validate="validateUrl" type="url" placeholder="URL da imagem 2" />
             <div class="spacer"></div>
-            <input type="text" placeholder="Resposta incorreta 3" />
-            <input type="url" placeholder="URL da imagem 3" />
+            <input data-validate="validateAnswer" type="text" placeholder="Resposta incorreta 3" />
+            <input data-validate="validateUrl" type="url" placeholder="URL da imagem 3" />
         </div>
         `
     }
     form.innerHTML += `
-        <button type="button" class="creation-button" name="question-section-button">
+        <button class="creation-button" name="question-section-button">
             Prosseguir para criar níveis
         </button>
     `

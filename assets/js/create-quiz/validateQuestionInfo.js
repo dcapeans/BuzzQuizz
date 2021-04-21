@@ -3,10 +3,14 @@
 function InitQuestionButtonListener(){
     const form = document.querySelector("[name=questions-info]")
 
+
     form.addEventListener("submit", function(event){
         event.preventDefault()
-        submitQuestionInfo()
-        ShowCreateLevels()
+        if(validateAll()){
+            submitQuestionInfo()
+            renderCreateLevels()
+            ShowCreateLevels()
+        }
         return false
     })
 }
@@ -19,4 +23,3 @@ function submitQuestionInfo() {
     
     
 }
-
