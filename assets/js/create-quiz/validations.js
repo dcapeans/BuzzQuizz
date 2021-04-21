@@ -1,14 +1,14 @@
 function validateAll() {
-    const isValid = false
+    let isValid = false
     if (validateText() &&
         validateUrl() &&
         validateColor() &&
         validateAnswer() &&
-        checkMinimumFilled()) {  
+        checkMinimumFilled()) { 
+            isValid = true
     }
     return isValid
 }
-
 
 function validateText() {
     const inputs = document.querySelectorAll("[data-validate=validateText]")
@@ -72,4 +72,8 @@ function checkMinimumFilled() {
         }
     })
     return isValid
+}
+
+function validateScore() {
+    
 }

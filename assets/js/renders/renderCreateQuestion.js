@@ -52,5 +52,5 @@ function renderCreateQuestion() {
         button.addEventListener("click", handleFormOpenFactory(".question-form", ".question-open-button"))
     })
 
-    document.querySelector("[name=question-section-button]").addEventListener("click", ShowCreateLevels)
+    InitQuestionButtonListener()
 }
