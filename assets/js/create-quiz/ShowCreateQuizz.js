@@ -10,6 +10,7 @@ function ShowCreateQuestion() {
     const createQuestion = document.querySelector("[name=questions]")
     const creation = document.querySelector('.creation-quizz');
 
+    renderCreateQuestion()
     showOrHide([createQuestion], [creation])
 }
 
@@ -17,6 +18,7 @@ function ShowCreateLevels() {
     const createQuestion = document.querySelector("[name=questions]")
     const createLevels = document.querySelector("[name=levels]")
 
+    renderCreateLevels()
     showOrHide([createLevels], [createQuestion])
 }
 

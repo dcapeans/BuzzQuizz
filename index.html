@@ -181,7 +181,7 @@
 					<input
 						type="number"
 						placeholder="Quantidade de perguntas do quizz"
-						min="3"
+						min="1"
 						required
 					/>
 					<input
@@ -200,98 +200,14 @@
 		<section class="creation-quizz hidden" name="questions">
 			<p class="creation-page-title">Crie suas perguntas</p>
 			<form name="questions-info">
-				<div class="input-list collapsed hidden">
-					<span class="option-title">Pergunta 1</span>
-					<ion-icon name="create-outline"></ion-icon>
-				</div>
-
-				<div class="input-list">
-					<span class="option-title">Pergunta 1</span>
-					<input
-						type="text"
-						placeholder="Texto da pergunta"
-						minlength="20"
-						required
-					/>
-					<input
-						type="text"
-						placeholder="Cor de fundo da pergunta (em hexadecimal)"
-						pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
-						required
-					/>
-					<span class="option-title">Resposta correta</span>
-					<input
-						type="text"
-						placeholder="Resposta correta"
-						required
-					/>
-					<input type="url" placeholder="URL da imagem" required />
-					<span class="option-title">Resposta incorreta</span>
-					<input
-						type="text"
-						placeholder="Resposta incorreta 1"
-						required
-					/>
-					<input type="url" placeholder="URL da imagem 1" required />
-					<div class="spacer"></div>
-					<input type="text" placeholder="Resposta incorreta 2" />
-					<input type="url" placeholder="URL da imagem 2" />
-					<div class="spacer"></div>
-					<input type="text" placeholder="Resposta incorreta 3" />
-					<input type="url" placeholder="URL da imagem 3" />
-				</div>
-				<div class="input-list collapsed">
-					<span class="option-title">Pergunta 2</span>
-					<ion-icon name="create-outline"></ion-icon>
-				</div>
-				<div class="input-list collapsed">
-					<span class="option-title">Pergunta 3</span>
-					<ion-icon name="create-outline"></ion-icon>
-				</div>
-				<button class="creation-button" name="question-section-button">
-					Prosseguir para criar níveis
-				</button>
+				
 			</form>
 		</section>
 
 		<section class="creation-quizz hidden" name="levels">
-			<p class="creation-page-title">Agora, decida os níveis</p>
-			<div class="input-list">
-				<span class="option-title">Nível 1</span>
-				<input type="text" placeholder="Título do nível" required />
-				<input
-					type="number"
-					placeholder="% de acerto mínima"
-					min="0"
-					max="100"
-					required
-				/>
-				<input
-					type="text"
-					placeholder="URL da imagem do nível"
-					required
-				/>
-				<input
-					type="text"
-					placeholder="Descrição do nível"
-					minlength="30"
-				/>
-			</div>
-			<div class="input-list collapsed">
-				<span class="option-title">Nível 2</span>
-				<ion-icon name="create-outline"></ion-icon>
-			</div>
-			<div class="input-list collapsed">
-				<span class="option-title">Nível 2</span>
-				<ion-icon name="create-outline"></ion-icon>
-			</div>
-			<button
-				class="creation-button"
-				name="level-section-button"
-				onclick="ShowCreateDone()"
-			>
-				Finalizar Quizz
-			</button>
+            <form name="levels-info">
+                <p class="creation-page-title">Agora, decida os níveis</p>
+            </form>
 		</section>
 
 		<section class="creation-quizz hidden" name="quizz-done">
@@ -308,9 +224,12 @@
 		<script src="assets/js/requests/getOneQuiz.js"></script>
 		<script src="assets/js/renders/renderQuizzes.js"></script>
 		<script src="assets/js/renders/renderOneQuiz.js"></script>
+		<script src="assets/js/renders/renderCreateQuestion.js"></script>
+		<script src="assets/js/renders/renderCreateLevels.js"></script>
 		<script src="assets/js/create-quiz/ShowCreateQuizz.js"></script>
 		<script src="assets/js/create-quiz/validateBasicInfo.js"></script>
 		<script src="assets/js/create-quiz/validateQuestionInfo.js"></script>
+		<script src="assets/js/create-quiz/handleFormOpen.js"></script>
 		<script src="assets/js/solve-quiz/restartQuiz.js"></script>
 		<script src="assets/js/solve-quiz/selectAnswer.js"></script>
 		<script src="assets/js/solve-quiz/showQuizResult.js"></script>

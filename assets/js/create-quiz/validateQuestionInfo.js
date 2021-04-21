@@ -1,4 +1,4 @@
-InitQuestionButtonListener()
+// InitQuestionButtonListener()
 
 function InitQuestionButtonListener(){
     const form = document.querySelector("[name=questions-info]")
@@ -17,6 +17,6 @@ function submitQuestionInfo() {
     const form = document.querySelector("[name=basic-info]")
     const valuesArr = form.querySelectorAll("input")
     
-    console.log(valuesArr)
+    
 }
 
