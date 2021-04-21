@@ -1,5 +1,4 @@
 function selectAnswer(element) {
-    const result = document.querySelector('.result');
 	const parent = element.parentElement;
 	const children = [...parent.children];
 	parent.classList.add('selected');
@@ -18,7 +17,7 @@ function selectAnswer(element) {
             });
         }
         else {
-            result.classList.remove('hidden')
+            showQuizResult();
             result.scrollIntoView({
                 behavior: 'smooth',
                 block: 'center',

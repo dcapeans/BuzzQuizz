@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 		<script
 			type="module"
 			src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
@@ -156,7 +156,7 @@
 					</figcaption>
 				</figure>
 			</div>
-			<button onclick="renderOneQuiz(currentQuiz, false)">
+			<button onclick="restartQuiz()">
 				Reiniciar Quizz
 			</button>
 			<button onclick="showHomepage()">Voltar pra home</button>
@@ -311,7 +311,9 @@
 		<script src="assets/js/create-quiz/ShowCreateQuizz.js"></script>
 		<script src="assets/js/create-quiz/validateBasicInfo.js"></script>
 		<script src="assets/js/create-quiz/validateQuestionInfo.js"></script>
+		<script src="assets/js/solve-quiz/restartQuiz.js"></script>
 		<script src="assets/js/solve-quiz/selectAnswer.js"></script>
+		<script src="assets/js/solve-quiz/showQuizResult.js"></script>
 		<script src="assets/js/utils/showOrHide.js"></script>
 		<script src="assets/js/utils/shuffleArray.js"></script>
 		<script src="assets/js/utils/showHomepage.js"></script>
