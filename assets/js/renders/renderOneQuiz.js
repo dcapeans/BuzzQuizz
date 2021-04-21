@@ -1,4 +1,4 @@
-function renderOneQuiz(quiz, fromHome) {
+function renderOneQuiz(quiz, fromHome = true) {
     const banner = document.querySelector('.quizz-banner');
     const questions = document.querySelector('.questions');
     const myQuizzes = document.querySelector('.my-quizzes');
@@ -34,4 +34,5 @@ function renderOneQuiz(quiz, fromHome) {
     });
 
     if(fromHome) showOrHide([banner, questions], [myQuizzes, allQuizzes]);
+    else window.scroll({top: 0, behavior: "smooth"});
 }
