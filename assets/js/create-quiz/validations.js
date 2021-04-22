@@ -1,11 +1,22 @@
-function validateAll() {
+function validateQuestionAll() {
     let isValid = false
     if (validateText() &&
         validateUrl() &&
         validateColor() &&
         validateAnswer() &&
-        checkMinimumFilled()) { 
-            isValid = true
+        checkMinimumFilled()) {
+        isValid = true
+    }
+    return isValid
+}
+
+function validateLevelAll() {
+    let isValid = false
+    if (validateLevelTitle() &&
+        validateLevelDescription() &&
+        validateScore() &&
+        validateLevelUrl()) {
+        isValid = true
     }
     return isValid
 }
@@ -74,6 +85,58 @@ function checkMinimumFilled() {
     return isValid
 }
 
+function validateLevelTitle() {
+    const titles = document.querySelectorAll("[data-validate=validateLevelTitle]")
+    let isValid = false
+    titles.forEach(title => {
+        if (title.value.length > 9) {
+            isValid = true
+        }
+    })
+    return isValid
+}
+
 function validateScore() {
+    const scores = document.querySelectorAll("[data-validate=validateScore]")
+    let isValid = false
     
+    const newArr = []
+    scores.forEach(score => newArr.push(score.value))
+    const containsZero = newArr.includes("0")
+
+    scores.forEach(score => {
+        if (score.value >= 0 && score.value <= 100) {
+            if(containsZero){
+                isValid = true
+            }
+        }
+    })
+    return isValid
+}
+
+function validateLevelUrl() {
+    const levelUrls = document.querySelectorAll("[data-validate=validateLevelUrl]")
+    isValid = false
+    const pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+        '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+        '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+        '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+    levelUrls.forEach(url => {
+        if (pattern.test(url.value)) {
+            isValid = true
+        }
+    })
+    return isValid
+}
+
+function validateLevelDescription() {
+    const descriptions = document.querySelectorAll("[data-validate=validateLevelDescription]")
+    isValid = false
+    descriptions.forEach(description => {
+        if (description.value.length >= 30)
+            isValid = true
+    })
+    return isValid
 }

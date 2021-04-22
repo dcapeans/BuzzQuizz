@@ -1,0 +1,11 @@
+function renderCreateDone() {
+    const section = document.querySelector("[name=quizz-done]")
+    section.innerHTML = `
+        <p class="creation-page-title">Seu quizz está pronto!</p>
+        <img src="${quizzObject.image}" alt="" />
+        <button class="creation-button">Acessar Quizz</button>
+        <button class="back-home-button" onclick="showHomepage()">
+            Voltar para home
+        </button>
+    `
+}
