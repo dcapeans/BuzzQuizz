@@ -23,6 +23,8 @@ function renderCreateLevels() {
                     type="number"
                     placeholder="% de acerto mínima"
                     name="level-minValue"
+                    min="0"
+                    max="100"
                     required
                 />
                 <input
@@ -65,6 +67,7 @@ function InitLevelButtonListener() {
             submitLevelInfo()
             renderCreateDone()
             ShowCreateDone()
+            form.reset()
         } else {
             alert("Preencha os campos corretamente")
         }

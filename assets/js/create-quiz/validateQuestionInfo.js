@@ -10,6 +10,7 @@ function InitQuestionButtonListener() {
             submitQuestionInfo()
             renderCreateLevels()
             ShowCreateLevels()
+            form.reset()
         } else {
             alert("Preencha os campos corretamente")
         }

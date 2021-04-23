@@ -10,6 +10,7 @@ function InitBasicButtonListener(){
         event.preventDefault()
         submitBasicInfo()
         ShowCreateQuestion()
+        form.reset()
         return false
     })
 }
