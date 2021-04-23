@@ -3,6 +3,7 @@ function ShowCreateQuizz() {
     const allQuizzes = document.querySelector('.all-quizzes');
     const creation = document.querySelector('.creation-quizz');
 
+    resetQuizzObject()
     showOrHide([creation], [myQuizzes, allQuizzes]);
 }
 
