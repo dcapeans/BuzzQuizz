@@ -3,6 +3,7 @@ function getQuizzes() {
         .then(res => {
             const data = res.data;
             renderQuizzes(data);
+            renderUserQuizzes(data);
         })
         .catch(err => {
             alert('Erro');
