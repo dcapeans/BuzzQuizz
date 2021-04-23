@@ -15,31 +15,36 @@ function renderCreateQuestion() {
                 type="text"
                 placeholder="Texto da pergunta"
                 minlength="20"
+                name="question-title"
             />
             <input data-validate="validateColor"
                 type="text"
                 placeholder="Cor de fundo da pergunta (em hexadecimal)"
+                name="question-color"
             />
             <span class="option-title">Resposta correta</span>
             <input data-validate="validateAnswer"
                 data-required="required"
                 type="text"
                 placeholder="Resposta correta"
+                name="question-right"
             />
-            <input data-validate="validateUrl" data-required="required" type="url" placeholder="URL da imagem" />
+            <input data-validate="validateUrl" data-required="required" type="url" placeholder="URL da imagem" name="question-right-img"/>
             <span class="option-title">Resposta incorreta</span>
-            <input data-validate="validateAnswer"
+            <input class="wrong-answer"
+                data-validate="validateAnswer"
                 data-required="required"
                 type="text"
                 placeholder="Resposta incorreta 1"
+                name="question-wrong-1"
             />
-            <input data-validate="validateUrl" data-required="required" type="url" placeholder="URL da imagem 1"  />
+            <input data-validate="validateUrl" data-required="required" type="url" placeholder="URL da imagem 1" name="question-wrong-1-img"/>
             <div class="spacer"></div>
-            <input data-validate="validateAnswer" type="text" placeholder="Resposta incorreta 2" />
-            <input data-validate="validateUrl" type="url" placeholder="URL da imagem 2" />
+            <input data-validate="validateAnswer" type="text" placeholder="Resposta incorreta 2" name="question-wrong-2" class="wrong-answer"/>
+            <input data-validate="validateUrl" type="url" placeholder="URL da imagem 2" name="question-wrong-2-img"/>
             <div class="spacer"></div>
-            <input data-validate="validateAnswer" type="text" placeholder="Resposta incorreta 3" />
-            <input data-validate="validateUrl" type="url" placeholder="URL da imagem 3" />
+            <input data-validate="validateAnswer" type="text" placeholder="Resposta incorreta 3" name="question-wrong-3" class="wrong-answer"/>
+            <input data-validate="validateUrl" type="url" placeholder="URL da imagem 3" name="question-wrong-3-img"/>
         </div>
         `
     }

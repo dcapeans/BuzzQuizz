@@ -1,10 +1,3 @@
-const quizzObject = {
-    title: "",
-    image: "",
-    questions: [],
-    levels: []
-}
-
 let numberQuestions;
 let numberLevels;
 
