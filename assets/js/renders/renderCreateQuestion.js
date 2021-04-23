@@ -1,5 +1,5 @@
 function renderCreateQuestion() {
-    const form = document.querySelector("[name=questions-info]")
+    const form = document.querySelector(".questions-info-form")
     form.innerHTML = "";
 
     for (let i = 1; i <= numberQuestions; i++) {

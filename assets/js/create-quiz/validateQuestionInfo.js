@@ -1,7 +1,7 @@
 const questionsArr = []
 
 function InitQuestionButtonListener() {
-    const form = document.querySelector("[name=questions-info]")
+    const form = document.querySelector(".questions-info-form")
 
 
     form.addEventListener("submit", function (event) {
@@ -18,7 +18,7 @@ function InitQuestionButtonListener() {
 }
 
 function submitQuestionInfo() {
-    const form = document.querySelector("[name=questions-info]")
+    const form = document.querySelector(".questions-info-form")
     const questions = form.querySelectorAll(".question-form")
     
 
@@ -57,7 +57,7 @@ function submitQuestionInfo() {
             }
             answers.push(thirdIncorrectAnswerObj)
         }
-        questionObj = {
+        const questionObj = {
             title: question.querySelector("[name=question-title]").value,
             color: question.querySelector("[name=question-color]").value,
             answers: answers

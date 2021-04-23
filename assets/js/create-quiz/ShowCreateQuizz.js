@@ -7,7 +7,7 @@ function ShowCreateQuizz() {
 }
 
 function ShowCreateQuestion() {
-    const createQuestion = document.querySelector("[name=questions]")
+    const createQuestion = document.querySelector(".creation-questions")
     const creation = document.querySelector('.creation-quizz');
 
     renderCreateQuestion()
@@ -15,15 +15,15 @@ function ShowCreateQuestion() {
 }
 
 function ShowCreateLevels() {
-    const createQuestion = document.querySelector("[name=questions]")
-    const createLevels = document.querySelector("[name=levels]")
+    const createQuestion = document.querySelector(".creation-questions")
+    const createLevels = document.querySelector(".creation-levels")
 
     showOrHide([createLevels], [createQuestion])
 }
 
 function ShowCreateDone() {
-    const createLevels = document.querySelector("[name=levels]")
-    const createDone = document.querySelector("[name=quizz-done]")
+    const createLevels = document.querySelector(".creation-levels")
+    const createDone = document.querySelector(".quizz-done")
 
     showOrHide([createDone], [createLevels])
 }

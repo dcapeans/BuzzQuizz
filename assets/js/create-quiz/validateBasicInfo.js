@@ -4,7 +4,7 @@ let numberLevels;
 InitBasicButtonListener()
 
 function InitBasicButtonListener(){
-    const form = document.querySelector("[name=basic-info]")
+    const form = document.querySelector(".basic-info-form")
 
     form.addEventListener("submit", function(event){
         event.preventDefault()
@@ -15,7 +15,7 @@ function InitBasicButtonListener(){
 }
 
 function submitBasicInfo() {
-    const form = document.querySelector("[name=basic-info]")
+    const form = document.querySelector(".basic-info-form")
     const valuesArr = form.querySelectorAll("input")
     
     quizzObject.title = valuesArr[0].value

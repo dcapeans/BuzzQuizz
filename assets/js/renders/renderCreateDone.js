@@ -1,5 +1,5 @@
 function renderCreateDone() {
-    const section = document.querySelector("[name=quizz-done]")
+    const section = document.querySelector(".quizz-done")
     section.innerHTML = `
         <p class="creation-page-title">Seu quizz está pronto!</p>
         <img src="${quizzObject.image}" alt="" />
