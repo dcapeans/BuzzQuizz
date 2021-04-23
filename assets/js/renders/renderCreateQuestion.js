@@ -14,7 +14,6 @@ function renderCreateQuestion() {
             <input data-validate="validateText"
                 type="text"
                 placeholder="Texto da pergunta"
-                minlength="20"
                 name="question-title"
             />
             <input data-validate="validateColor"

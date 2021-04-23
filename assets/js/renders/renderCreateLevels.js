@@ -65,6 +65,7 @@ function InitLevelButtonListener() {
         event.preventDefault()
         if (validateLevelAll()) {
             submitLevelInfo()
+            postNewQuizz()
             renderCreateDone()
             ShowCreateDone()
             form.reset()
