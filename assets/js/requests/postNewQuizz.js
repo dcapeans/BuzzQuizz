@@ -18,6 +18,6 @@ function postNewQuizz() {
 function resetQuizzObject() {
     quizzObject.title = ""
     quizzObject.image = ""
-    quizzObject.questions = []
-    quizzObject.levels = []
+    quizzObject.questions;
+    quizzObject.levels;
 }
