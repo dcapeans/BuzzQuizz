@@ -1,4 +1,4 @@
-const quizzIdArray = []
+let quizzIdArray = []
 
 function postNewQuizz() {
     const promise = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/buzzquizz/quizzes", quizzObject)
