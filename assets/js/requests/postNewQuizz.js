@@ -1,10 +1,13 @@
+const quizzIdArray = []
+
 function postNewQuizz() {
     const promise = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/buzzquizz/quizzes", quizzObject)
     promise.then(response => {
-        //salvar ID da resposta no localStorage
-        const serializedID = JSON.stringify(response.data.id)
-        localStorage.setItem("id", serializedID)
-        resetQuizzObject()
+        //salvar array ID da resposta no localStorage
+        
+        quizzIdArray.push(response.data.id)
+        const serializedIDArray = JSON.stringify(quizzIdArray)
+        localStorage.setItem("id", serializedIDArray)
     })
     promise.catch(error => {
         alert("Erro")
